@@ -1,4 +1,4 @@
-const _ = require('lodash');
+const throttleFun = require('lodash.throttle');
 
 const inputRef = document.querySelector('[name="email"]');
 const messageRef = document.querySelector('[name="message"]');
@@ -13,10 +13,10 @@ if (localStorage.getItem('feedback-form-state')) {
 }
 
 function onInput(event) {
-  // console.log(
-  //   event.currentTarget.email.value,
-  //   event.currentTarget.message.value
-  // );
+  console.log(
+    event.currentTarget.email.value,
+    event.currentTarget.message.value
+  );
   localStorage.setItem(
     'feedback-form-state',
     JSON.stringify({
@@ -28,7 +28,7 @@ function onInput(event) {
 
 formRef.addEventListener(
   'input',
-  _.throttle(onInput, 500, { trailing: false })
+  throttleFun(onInput, 500, { trailing: false })
 );
 
 formRef.addEventListener('submit', onSubmit);
