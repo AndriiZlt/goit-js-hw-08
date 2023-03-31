@@ -13,11 +13,10 @@ if (localStorage.getItem('feedback-form-state')) {
 }
 
 function onInput(event) {
-  console.log(
-    event.currentTarget.email.value,
-    event.currentTarget.message.value
-  );
-
+  // console.log(
+  //   event.currentTarget.email.value,
+  //   event.currentTarget.message.value
+  // );
   localStorage.setItem(
     'feedback-form-state',
     JSON.stringify({
