@@ -43,6 +43,6 @@ function onSubmit(event) {
   });
   inputRef.value = '';
   messageRef.value = '';
-  localStorage.clear();
+  localStorage.removeItem("'feedback-form-state'");
   console.log('Last values:', allFormData);
 }
