@@ -43,6 +43,6 @@ function onSubmit(event) {
   });
   inputRef.value = '';
   messageRef.value = '';
-  localStorage.removeItem("'feedback-form-state'");
+  localStorage.removeItem("'feedback-form-state'"); //Sorry. Забув виправити вперше
   console.log('Last values:', allFormData);
 }
